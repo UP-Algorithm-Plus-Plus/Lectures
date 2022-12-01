@@ -15,9 +15,9 @@ int main ()
     int n = Y.size();
 
     // initialize lcs table to 0
-    int lcs[m][n];
-    for (int i = 0; i < m; i++)
-        for (int j = 0; j < n; j++)
+    int lcs[m+1][n+1];
+    for (int i = 0; i <= m; i++)
+        for (int j = 0; j <= n; j++)
             lcs[i][j] = 0;
 
     // start at 1 because of i-1 or j-1
@@ -30,7 +30,7 @@ int main ()
         }
     }
 
-    cout << lcs[m-1][n-1] << endl;
+    cout << lcs[m][n] << endl;
 
     return 0;
 }
